@@ -1,0 +1,41 @@
+body{
+	border-style: dashed;
+	border-color: red;
+	padding: 4em;
+	width: 25em;
+	height: 12em;
+	background-image: url(../img/robocop.png);
+	background-repeat: no-repeat;
+	margin: 5em auto;
+	background-position: 25em 8em;
+	text-align: right;
+	padding-top: 7em;
+}
+
+input{
+    border-bottom: 1px solid #9e9e9e !important;
+    border: none;
+    padding: 10px;
+    background-image: url(../img/tree.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    width: 8em;
+}
+
+input:focus{
+    border: none;
+    outline: aliceblue;
+}
+
+img{
+    display: block;
+    width: 35px;
+    margin-left: auto;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+img:hover {
+  transform: scale(1.5); 
+}

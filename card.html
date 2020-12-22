@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/png" href="img/robocop.png">
+		<title>Feliz navidad</title>
+		<!--Style-->
+		<link rel="stylesheet" type="text/css" href="css/card.css">
+		<!--Script-->
+		<script type="text/javascript">
+			function getParameterByName(name, url = window.location.href) {
+			    name = name.replace(/[\[\]]/g, '\\$&');
+			    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+			        results = regex.exec(url);
+			    if (!results) return null;
+			    if (!results[2]) return '';
+			    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+			}
+
+			function addName(){
+				var nombre = getParameterByName("nombre");
+				document.getElementById("nombre").innerHTML = nombre;
+			}
+		</script>
+	</head>
+	<body onload="addName()">
+		<div class="window">
+		<div class="santa">
+			<div class="head">
+				<div class="face">
+					<div class="redhat">
+						<div class="whitepart"></div>
+						<div class="redpart"></div>
+						<div class="hatball"></div>
+					</div>
+					<div class="eyes"></div>
+					<div class="beard">
+						<div class="nouse"></div>
+						<div class="mouth"></div>
+					</div>
+				</div>
+				<div class="ears"></div>
+			</div>
+			<div class="body"></div>
+		</div>
+	</div>
+	<div class="message">
+		<h1>¡<span id="nombre"></span> Feliz Navidad!</h1>
+	</div>
+	</body>
+</html>

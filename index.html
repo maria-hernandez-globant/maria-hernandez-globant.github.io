@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/png" href="img/robocop.png">
+		<title>Feliz navidad</title>
+		<!--Style-->
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+	</head>
+	<body>
+
+		<h1>Hola!</h1>
+
+		<input type="text" 
+			   name="nombre" 
+			   id="nombre"
+			   placeholder="Escribe tu nombre">
+		<!--Script-->
+		<script type="text/javascript">
+			function send(nombre){
+				window.location.href = "./card.html?nombre="+nombre;
+			}
+
+			var input = document.getElementById("nombre");
+			input.addEventListener("keyup", function(event) {
+			  if (event.keyCode === 13) {
+			   event.preventDefault();
+			   send(document.getElementById("nombre").value)
+			  }
+			});
+		</script>
+	</body>
+</html>
